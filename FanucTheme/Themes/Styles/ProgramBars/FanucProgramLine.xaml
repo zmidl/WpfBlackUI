@@ -1,0 +1,10 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:program="clr-namespace:FanucTheme.Controls.ProgramBars"
+  xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+  <Style o:Freeze="True" TargetType="program:ProgramLine">
+    <Setter Property="Foreground" Value="{DynamicResource ControlForegroundBrush}"/>
+    <Setter Property="DotDelayTime" Value="300"/>
+  </Style>
+</ResourceDictionary>

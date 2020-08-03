@@ -1,0 +1,9 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+  <Color x:Key="CheckedEffectColor">#FF232323</Color>
+  <Color x:Key="Wasp" >#FFFDCD00</Color>
+  <Color x:Key="UncheckedColor">Gray</Color>
+  <Color x:Key="NullcheckedColor">#00000000</Color>
+</ResourceDictionary>

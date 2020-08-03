@@ -1,0 +1,68 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=mscorlib"
+    xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    
+    <!-- General -->
+    <DropShadowEffect x:Key="ControlEffect" o:Freeze="True" Opacity="0" />
+    <CornerRadius x:Key="CornerRadius">0</CornerRadius>
+    <SolidColorBrush x:Key="ContainerBackground" o:Freeze="True" Color="White"/>
+    <!-- General -->
+    
+    
+    <!-- 深色按钮 -->
+    <SolidColorBrush  x:Key="ButtonBackgroundBrush" o:Freeze="True" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="ButtonBorderBrush"  o:Freeze="True" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="ButtonForegroundBrush" o:Freeze="True" Color="White"/>
+    <!-- 深色按钮 -->
+
+
+    <!-- 文本框 -->
+    <CornerRadius x:Key="TextBoxCornerRadius">0</CornerRadius>
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="TextBoxForegroundBrush" o:Freeze="True" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="TextBoxForegroundDisable" Color="#FF8C8C8C"/>
+    <Thickness x:Key="TextBoxBorderThiness" Left="0" Top="0" Right="0" Bottom="2"/>
+    <!-- 文本框 -->
+
+
+    <!-- 键盘按键 -->
+    <SolidColorBrush x:Key="KeyBorderForegroundBrush" o:Freeze="True" Color="DarkGray"/>
+    <SolidColorBrush x:Key="KeyBorderForegroundPressedBrush" o:Freeze="True" Color="#FF045CF5"/>
+    <LinearGradientBrush x:Key="KeyBorderBackgroundBrush" o:Freeze="True" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF2F2F2F" Offset="1"/>
+        <GradientStop Color="#FF727272" Offset="0"/>
+        <GradientStop Color="#FF474747" Offset="0.05"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="KeyBorderBorderBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop o:Freeze="True" Color="#FF202022" Offset="0"/>
+        <GradientStop o:Freeze="True" Color="#FF535254" Offset="1"/>
+        <GradientStop o:Freeze="True" Color="#FF202022" Offset="0.908"/>
+    </LinearGradientBrush>
+    <!-- 键盘按键 -->
+
+
+    <!-- FanucCheckBox -->
+    <SolidColorBrush x:Key="CheckBoxBorderBrush" o:Freeze="True" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="CheckBoxBackgroundBrush" o:Freeze="True" Color="#FFE8E8E8"/>
+    <SolidColorBrush x:Key="CheckBoxForegroundBrush" o:Freeze="True" Color="White"/>
+    <SolidColorBrush x:Key="CheckBoxUncheckForegroundBrush" o:Freeze="True" Color="#FF9DA6FF"/>
+    <!-- FanucCheckBox -->
+
+
+    
+    <!-- FanucRadioButton -->
+    <SolidColorBrush x:Key="FanucRadioBorderBrush" o:Freeze="True" Color="#FF326cf3"/>
+    <!-- FanucRadioButton -->
+    <SolidColorBrush x:Key="ControlTextBrush" o:Freeze="True" Color="White"/>
+
+
+    <SolidColorBrush  x:Key="RadioBackgroundBrush" o:Freeze="True" Color="White"/>
+    <SolidColorBrush  x:Key="RadioBackground2Brush" o:Freeze="True" Color="White"/>
+    <SolidColorBrush  x:Key="RadioBorderBrush" o:Freeze="True" Color="#FF326cf3"/>
+    <SolidColorBrush x:Key="RectRadioControlForegroundBrush" o:Freeze="True" Color="White"/>
+
+</ResourceDictionary>

@@ -1,0 +1,25 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:cv="clr-namespace:FanucTheme.Converters"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/Buttons/FanucButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/Buttons/FanucLightButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/Buttons/FanucKeyButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/Buttons/FanucLabelButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/TextBoxes/FanucTextBox.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/PasswordBoxes/FanucPasswordBox.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/TextBoxes/FanucRichTextBox.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/RadioButtons/FanucCircleRadioButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/RadioButtons/FanucRectRadioButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/ToggleButtons/FanucToggleButton.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/CheckBoxes/FanucCheckBox.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/DataGrids/FanucDataGrid.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/ComboBoxes/FanucComboBox.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/ProgramBars/FanucProgramCircleAlways.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/ProgramBars/FanucProgramCircle.xaml"/>
+    <ResourceDictionary Source="pack://application:,,,/FanucTheme;component/Themes/Styles/ProgramBars/FanucProgramLine.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
+    

@@ -1,0 +1,73 @@
+﻿<ResourceDictionary 
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cv="clr-namespace:FanucTheme.Converters"
+  xmlns:button="clr-namespace:FanucTheme.Controls.Buttons"
+  xmlns:o="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+  xmlns:program="clr-namespace:FanucTheme.Controls.ProgramBars">
+
+  <cv:ConvertBoolToVisibilityCollapse x:Key="ConvertBoolToVisibilityCollapse"/>
+  <cv:ConvertIsNullToVisibilityCollapse x:Key="ConvertIsNullToVisibilityCollapse"/>
+
+  <Style x:Key="FanucButtonStyle" o:Freeze="True" TargetType="Button">
+    <Setter Property="Height" Value="46"/>
+    <Setter Property="Width" Value="80"/>
+    <Setter Property="Background" Value="{DynamicResource ButtonBackgroundBrush}"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrush}"/>
+    <Setter Property="BorderThickness" Value="1.6"/>
+    <Setter Property="Foreground" Value="{DynamicResource ButtonForegroundBrush}" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="FontWeight" Value="Normal"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="Effect" Value="{DynamicResource ControlEffect}"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="Button" >
+          <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding button:FanucButton.Radius}">
+            <StackPanel Effect="{DynamicResource ContentEffect}" HorizontalAlignment="Center" Orientation="Horizontal">
+              <Path 
+                Margin="0,12,10,12" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="{TemplateBinding button:FanucButton.Data}"
+                Visibility="{TemplateBinding button:FanucButton.Data,Converter={StaticResource ConvertIsNullToVisibilityCollapse}}"/>
+              <ContentPresenter x:Name="ContentPresenter" TextBlock.Foreground="{TemplateBinding Foreground}" TextBlock.FontSize="{TemplateBinding FontSize}" Content="{TemplateBinding ContentControl.Content}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+              <program:ProgramCircle 
+                Margin="10,0,0,0" Foreground="{TemplateBinding Foreground}"
+                IsRunning="{TemplateBinding button:FanucButton.IsLoading}"
+                Visibility="{TemplateBinding button:FanucButton.IsLoading,Converter={StaticResource ConvertBoolToVisibilityCollapse}}"/>
+            </StackPanel>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+              <Setter Property="Opacity" Value="{StaticResource Disable}"/>
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Style.Triggers>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsMouseOver" Value="True"/>
+          <Condition Property="IsPressed"  Value="True"/>
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Opacity" Value="{StaticResource IsPressed}"/>
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsMouseOver" Value="True"/>
+          <Condition Property="IsPressed"  Value="False"/>
+        </MultiTrigger.Conditions>
+        <MultiTrigger.Setters>
+          <Setter Property="Opacity" Value="{StaticResource MouseOver}"/>
+        </MultiTrigger.Setters>
+      </MultiTrigger>
+    </Style.Triggers>
+  </Style>
+
+  <Style TargetType="Button" BasedOn="{StaticResource FanucButtonStyle}"/>
+
+</ResourceDictionary>
